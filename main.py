@@ -1,3 +1,4 @@
+'''
 sides = [3, 2, 4, 7, 12, 11, 13, 15, 16, 14, 14]
 
 sides = sorted(sides, reverse=True)
@@ -16,3 +17,33 @@ for i in range (len(sides)):
                     smax = s
 
 print('Максимальная площадь треугольника', smax)
+'''
+import math
+
+
+print('a*x**2 + b*x + c')
+
+
+a = int(input('Коэффициент a: '))
+b = int(input('Коэффициент b: '))
+c = int(input('Коэффициент c: '))
+
+if a == 0:
+    print('Невозможно решить')
+
+d = b**2 - 4*a*c
+
+print('Дискриминант равен: ', d)
+
+if d > 0:
+    x1 = (-b + math.sqrt(d)) / (2*a)
+    x2 = (-b - math.sqrt(d)) / (2*a)
+    print('Корни уравнения: ', x1, ' ,', x2)
+
+elif d == 0:
+    x = -b / 2*a
+    print('Корень уравнения: ', x)
+elif d < 0:
+    print('Нет решения')
+
+
